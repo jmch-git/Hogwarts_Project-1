@@ -43,7 +43,9 @@ function handleGetData(evt){
     if(!userInput) return; //get outta here
 
     function charName(matchInput) {
-        return matchInput.name === userInput;
+        let arrayName = matchInput.name
+        return arrayName.toLowerCase() === userInput.toLowerCase();
+     //   return matchInput.name.toLowerCase() === userInput.toLowerCase();
       }
       
       selectedName = newArray.find(charName).name;  
