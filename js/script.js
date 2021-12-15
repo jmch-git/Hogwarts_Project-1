@@ -13,20 +13,20 @@ let selectedSpecies = "";
 let selectedWizard = "";
 
 
-//Element references)
+//ELEMENT REFERENCES
 //Creating jQuery variables for the form input value
 const $form = $("form");
 const $input =$("input[type='text']");
 
-
-//Event Listeners
+//EVENT LISTENERS
 $form.on("submit", handleGetData);
 
-//
+//FUNCTIONS
+
+//Initialise function
 init();
 
-//Functions
-//Create a new arrry with the data from the API
+//Function to create a new arrry with the data from the API
 function init(){
     $.ajax(URL).then(function(data){
         newArray = data;
@@ -34,20 +34,29 @@ function init(){
     })
 }
 
+//Function that runs with the input event and returns the input value
 function handleGetData(evt){
     evt.preventDefault();
     
     const userInput = $input.val()
 
-    //Check to make sure that there is something that was inputted before the Find Film button was clicked
+    //Check to make sure that there is something that was inputted before the button was clicked
     if(!userInput) return; //get outta here
 
     function charName(matchInput) {
         let arrayName = matchInput.name
-        return arrayName.toLowerCase() === userInput.toLowerCase();
-     //   return matchInput.name.toLowerCase() === userInput.toLowerCase();
-      }
-      
+    
+        if (arrayName.toLowerCase() !== userInput.toLowerCase()){
+            $('main').html(`
+              <h2>Character Not Found</h2>`)
+              console.log("in char not found")
+            $input.val("");
+        } else {
+            return arrayName.toLowerCase() === userInput.toLowerCase();
+        }
+    }
+
+   // if (charName != "") {
       selectedName = newArray.find(charName).name;  
       selectedSpecies = newArray.find(charName).species;
       selectedAncestry = newArray.find(charName).ancestry; 
@@ -57,10 +66,10 @@ function handleGetData(evt){
       selectedImage = newArray.find(charName).image;
 
       render();
+  //  }
     
     $input.val("");
 }
-
 
   function render(){
     $('main').html(`
@@ -72,3 +81,5 @@ function handleGetData(evt){
         <p>House: ${selectedHouse}</p>          
         <img src="${selectedImage}" alt="${selectedName}">
 `)}
+
+
