@@ -1,0 +1,69 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: Franklin Gothic Medium;
+    background-image: url("/hogwartsImage.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  h1 {
+    height: 50px;
+    /* background-color: rgb(151, 212, 151); */
+    align-items: center;
+    padding: 0px;
+    color: gold;
+    font-family: Franklin Gothic Medium;
+    font-size: 38px;
+  } 
+
+  #topH1 {
+    margin-top: 100px;
+    margin-bottom: 1px;
+  }
+
+  #bottomH1 {
+    margin-top: 0px;
+
+  }
+
+  .centered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  } 
+
+  .box {
+    width: 235px;
+    margin: 10px;
+    background-color: gold;
+    font-size: 16px;
+  }
+
+  .button {
+    width: 175px;
+    margin: 10px;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: gold;
+  }
+
+  .instructions {
+    color: gold;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #details {
+    color: gold;
+    font-size: 25px;
+  }
+
+  img {
+    justify-content: center;
+  }
+
+  

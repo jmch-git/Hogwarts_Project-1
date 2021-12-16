@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-  <script defer src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="./js/script.js"></script>
     <title>Project 1 - Who's Who At Hogwarts</title>
 
 </head>
+
 <body>
-    <h1>Wizarding World - Who's Who</h1>
-    <form>
-        <label>Name:</label>
-        <input type="text" placeholder="Example - Rubeus Hagrid" required>
-    </label>
-        <input type="submit" value="Revelio Character Info"/>
+    <div class="centered"></div>
+    <h1 class="centered" id="topH1">Wizarding World</h1>
+    <h1 class="centered" id="bottomH1">Who's Who</h1>
+    <form class="centered">
+        <!-- <label>Name:</label> -->
+        <input class="box" type="text" placeholder="Type Name: Exp: Ron Weasley" required>
+        <!-- </label> -->
+        <input class="button" type="submit" value="Revelio" />
     </form>
-    <main>
-        <h4>To Reveal Character Info - Type a Character Name and Hit the Revelio Button</h4>
+    <main class="centered">
+        <div class="instructions">
+            <p class="centered" id="topH4">To Reveal Character Info...</p>
+            <p class="centered" id="middleH4">Type a Character Name</p>
+            <p class="centered" id="bottomH4">Then Hit the Revelio Button</p>
+        </div>
     </main>
-        
+    </div>
 </body>
+
 </html>

@@ -48,7 +48,7 @@ function handleGetData(evt){
     
         if (arrayName.toLowerCase() !== userInput.toLowerCase()){
             $('main').html(`
-              <h2>Character Not Found</h2>`)
+              <h2 class="centered">Character Not Found</h2>`)
               console.log("in char not found")
             $input.val("");
         } else {
@@ -73,13 +73,13 @@ function handleGetData(evt){
 
   function render(){
     $('main').html(`
-        <h3>Name: ${selectedName}</h3>
-        <p>Species: ${selectedSpecies}</p>
-        <p>Ancestry: ${selectedAncestry}</p>
-        <p>Wizard: ${selectedWizard}</p>
-        <p>Patronus: ${selectedPatronus}</p>
-        <p>House: ${selectedHouse}</p>          
-        <img src="${selectedImage}" alt="${selectedName}">
+            <h3 class="centered" id="details">Name: ${selectedName}</h3>
+            <p class="centered" id="details">Species: ${selectedSpecies}</p>
+            <p class="centered" id="details">Ancestry: ${selectedAncestry}</p>
+            <p class="centered" id="details">Wizard: ${selectedWizard}</p>
+            <p class="centered" id="details">Patronus: ${selectedPatronus}</p>
+            <p class="centered" id="details">House: ${selectedHouse}</p>      
+            <img src="${selectedImage}" alt="${selectedName}" class="centered">
 `)}
 
 
