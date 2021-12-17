@@ -14,6 +14,8 @@ Harry Potter API
 ## Screenshots
 
 ![Wireframe](./Wireframe.png)
+![Screenshot on App Open](./Screenhot_On_Open.png)
+![Screenshot on App Open](./Screenshot_With_Data.png)
 
 
 ## Deployment
