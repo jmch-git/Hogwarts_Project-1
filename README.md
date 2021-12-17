@@ -13,9 +13,9 @@ jQuery
 Harry Potter API
 ## Screenshots
 
-./wireframe.png
-./Screen Shot on App Open.png
-./Screen Shot w Returned Data.png
+url("./wireframe.png")
+url("./Screen Shot on App Open.png")
+url("./Screen Shot w Returned Data.png")
 
 
 ## Deployment
