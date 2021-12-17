@@ -41,8 +41,9 @@ function handleGetData(evt){
     const userInput = $input.val()
 
     //Check to make sure that there is something that was inputted before the button was clicked
-    if(!userInput) return; //get outta here
+    if(!userInput) return; 
 
+    //Matching the input name to the array name 
     function charName(matchInput) {
         let arrayName = matchInput.name
     
@@ -56,7 +57,7 @@ function handleGetData(evt){
         }
     }
 
-   // if (charName != "") {
+    //Creating variables to house the values parced out from the array by key value
       selectedName = newArray.find(charName).name;  
       selectedSpecies = newArray.find(charName).species;
       selectedAncestry = newArray.find(charName).ancestry; 
@@ -66,20 +67,20 @@ function handleGetData(evt){
       selectedImage = newArray.find(charName).image;
 
       render();
-  //  }
     
     $input.val("");
 }
 
-  function render(){
+//Updating the HTML with the lines of data from the array
+function render(){
     $('main').html(`
-            <h3 class="centered" id="details">Name: ${selectedName}</h3>
-            <p class="centered" id="details">Species: ${selectedSpecies}</p>
-            <p class="centered" id="details">Ancestry: ${selectedAncestry}</p>
-            <p class="centered" id="details">Wizard: ${selectedWizard}</p>
-            <p class="centered" id="details">Patronus: ${selectedPatronus}</p>
-            <p class="centered" id="details">House: ${selectedHouse}</p>      
-            <img src="${selectedImage}" alt="${selectedName}" class="centered">
+        <h3 class="centered" id="details">Name: ${selectedName}</h3>
+        <p class="centered" id="details">Species: ${selectedSpecies}</p>
+        <p class="centered" id="details">Ancestry: ${selectedAncestry}</p>
+        <p class="centered" id="details">Wizard: ${selectedWizard}</p>
+        <p class="centered" id="details">Patronus: ${selectedPatronus}</p>
+        <p class="centered" id="details">House: ${selectedHouse}</p>      
+        <img src="${selectedImage}" alt="${selectedName}" class="centered">
 `)}
 
 
